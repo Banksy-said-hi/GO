@@ -8,3 +8,5 @@ Golang Learning Process
 
 - April 10th: & (memory address, pointer creation), * ( value of the memory pointer ), % ( remainder ):
     -     var b *int = &a // b holds the memory address of a
+ 
+- April 12th: Protocols and formats,  Request for comments ( RFC ), HTML, URI, HTTP, Encode and decode protocol packages, JSON marshalling and unmarshalling
