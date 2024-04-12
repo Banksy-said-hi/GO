@@ -10,3 +10,5 @@ Golang Learning Process
     -     var b *int = &a // b holds the memory address of a
  
 - April 12th: Protocols and formats,  Request for comments ( RFC ), HTML, URI, HTTP, Encode and decode protocol packages, JSON marshalling and unmarshalling
+
+- April 13th: File access ( open, read, write, close, seek )
