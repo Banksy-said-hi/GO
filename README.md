@@ -12,3 +12,8 @@ Golang Learning Process
 - April 12th: Protocols and formats,  Request for comments ( RFC ), HTML, URI, HTTP, Encode and decode protocol packages, JSON marshalling and unmarshalling
 
 - April 13th: File access ( open, read, write, close, seek )
+
+- [Coursera LH3MNNMD85DB.pdf](https://github.com/Banksy-said-hi/GO/files/14995130/Coursera.LH3MNNMD85DB.pdf)
+
+- 
+
