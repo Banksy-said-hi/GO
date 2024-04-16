@@ -13,7 +13,5 @@ Golang Learning Process
 
 - April 13th: File access ( open, read, write, close, seek )
 
-- [Coursera LH3MNNMD85DB.pdf](https://github.com/Banksy-said-hi/GO/files/14995130/Coursera.LH3MNNMD85DB.pdf)
-
 - 
 
