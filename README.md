@@ -13,6 +13,6 @@ Golang Learning Process
 
 - April 13th: File access ( open, read, write, close, seek )
 
-- <img width="855" alt="Screenshot 2024-04-16 at 12 02 13 PM" src="https://github.com/Banksy-said-hi/GO/assets/72816123/94863a8e-2fcf-4849-a137-780ad20f6155">
+<img width="855" alt="Screenshot 2024-04-16 at 12 02 13 PM" src="https://github.com/Banksy-said-hi/GO/assets/72816123/94863a8e-2fcf-4849-a137-780ad20f6155">
 
 
