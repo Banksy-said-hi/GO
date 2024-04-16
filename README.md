@@ -19,6 +19,7 @@ Golang Learning Process
 =================================================================================================================================
 
 - April 16th:
+
 **"Passing a slice passes a reference to the original underlying array, while passing an array passes a copy of the entire array."**
 
 Exactly. When you pass a slice to a function, any modifications made to the elements of the slice within that function will affect the original slice outside of it. This is because a slice contains a reference to the underlying array, so changes made to the slice are reflected in the original array.
