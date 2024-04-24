@@ -25,7 +25,10 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Animal struct {
 	food       string
@@ -55,6 +58,16 @@ func main() {
 		var animalName, info string
 		fmt.Print("> ")
 		fmt.Scan(&animalName, &info)
+
+		if animalName != "cow" && animalName != "bird" && animalName != "snake" {
+			fmt.Println(strings.ToUpper(animalName), "is not a defined animal! Use cow, bird or snake")
+			continue
+		}
+
+		if info != "eat" && info != "move" && info != "speak" {
+			fmt.Println(strings.ToUpper(info), "is not a defined action! Use eat, move or speak")
+			continue
+		}
 
 		switch animalName {
 		case "cow":
