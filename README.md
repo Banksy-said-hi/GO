@@ -30,6 +30,8 @@ On the other hand, when you pass an array to a function, you're passing a copy o
 
 An empty interface in Go can hold values of any type because it doesn't specify any methods. It's effectively the interface type that specifies zero methods. This means you can assign any value to a variable of type empty interface.
 
-```var i interface{} = 42
+```
+var i interface{} = 42
 var j interface{} = "hello"
-var k interface{} = 3.14```
+var k interface{} = 3.14
+```
