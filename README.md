@@ -16,7 +16,7 @@ Golang Learning Process
 <img width="855" alt="Screenshot 2024-04-16 at 12 02 13 PM" src="https://github.com/Banksy-said-hi/GO/assets/72816123/94863a8e-2fcf-4849-a137-780ad20f6155">
 
 
-=================================================================================================================================
+===============================================================================================================================================================================================================
 
 **"Passing a slice passes a reference to the original underlying array, while passing an array passes a copy of the entire array."**
 
@@ -24,7 +24,7 @@ Exactly. When you pass a slice to a function, any modifications made to the elem
 
 On the other hand, when you pass an array to a function, you're passing a copy of the entire array. Therefore, modifications made to the array within the function won't affect the original array outside of it. The function receives a separate copy of the array, so changes made to this copy don't impact the original array.
 
-=================================================================================================================================
+===============================================================================================================================================================================================================
 
 **Empty Interface**
 
@@ -36,11 +36,11 @@ var j interface{} = "hello"
 var k interface{} = 3.14
 ```
 
-=================================================================================================================================
+===============================================================================================================================================================================================================
 
 <img width="908" alt="Screenshot 2024-05-01 at 7 51 17 PM" src="https://github.com/Banksy-said-hi/GO/assets/72816123/704af8e1-89ba-42b1-b2ce-51454a22ad1a">
 
-=================================================================================================================================
+===============================================================================================================================================================================================================
 
 **Interleaved Execution**
 
@@ -54,7 +54,7 @@ While Chef A might be chopping vegetables, Chef B could be sautéing meat, and C
 As one chef completes a step in their recipe, they temporarily pause to allow another chef to use the same resources.
 This interleaved process continues, with chefs taking turns using shared resources to make progress on their dishes. Overall, multiple dishes are prepared concurrently, maximizing kitchen efficiency.
 
-=================================================================================================================================
+===============================================================================================================================================================================================================
 
 **Goroutines**
 
@@ -69,7 +69,7 @@ For example, one worker might handle plumbing, another might focus on electrical
 The workers communicate and coordinate their efforts through channels, sharing information and collaborating on tasks that require input from multiple workers.
 By dividing the work among multiple workers (goroutines) and allowing them to collaborate effectively, the project progresses efficiently, similar to how goroutines enable concurrent execution and cooperation in a Go program.
 
-=================================================================================================================================
+===============================================================================================================================================================================================================
 
 **Concurrency** is often used to handle tasks that involve waiting for I/O operations (like reading from files or making network requests) or to improve responsiveness in applications by allowing them to perform other tasks while waiting.
 
