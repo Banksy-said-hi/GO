@@ -69,6 +69,12 @@ For example, one worker might handle plumbing, another might focus on electrical
 The workers communicate and coordinate their efforts through channels, sharing information and collaborating on tasks that require input from multiple workers.
 By dividing the work among multiple workers (goroutines) and allowing them to collaborate effectively, the project progresses efficiently, similar to how goroutines enable concurrent execution and cooperation in a Go program.
 
+=================================================================================================================================
+
+**Concurrency** is often used to handle tasks that involve waiting for I/O operations (like reading from files or making network requests) or to improve responsiveness in applications by allowing them to perform other tasks while waiting.
+
+**Parallelism** is particularly useful for computationally intensive tasks that can be divided into smaller independent parts, allowing them to be executed simultaneously on multiple CPU cores, thus reducing overall computation time.
+
 
 
 
