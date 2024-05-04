@@ -112,3 +112,32 @@ Similarly, in computer systems, if the processor spends more time waiting for da
 ==============================================================================================================================================================================================================
 
 **Moore's Law** is the observation made by Gordon Moore, co-founder of Intel, in 1965, that the number of transistors on a microchip doubles approximately every two years, leading to a continuous increase in computing power and performance, and a decrease in cost. Essentially, it predicts that the capabilities of computer technology will exponentially grow over time, resulting in faster and more powerful devices.
+
+==============================================================================================================================================================================================================
+
+**P = α * CFV^2**
+
+P represents power consumption,
+α is a constant representing circuit activity,
+CF is the capacitance of the circuit, and
+V is the voltage across the circuit.
+In this model, power consumption (P) is directly proportional to the square of the voltage (V) and is also influenced by the circuit activity (α) and the capacitance (CF). It's often used in electronics design to estimate power consumption and optimize circuit performance.
+
+==============================================================================================================================================================================================================
+
+**Stack**:
+In Go, each goroutine (a lightweight thread of execution) has its own stack.
+The stack is used to store local variables, function parameters, and other function-related data during the execution of a goroutine.
+Go manages the size and growth of the stack automatically, so programmers don't need to worry about stack overflows or manually resizing the stack.
+Since Go uses goroutines extensively for concurrent programming, efficient stack management is crucial for supporting thousands or even millions of goroutines in a single program.
+
+**Heap**:
+In Go, memory allocation for objects or data structures is typically done on the heap.
+Go provides built-in memory allocation and garbage collection mechanisms to manage heap memory.
+Memory allocated on the heap persists beyond the scope of individual function calls or goroutine executions.
+Go's garbage collector automatically reclaims memory from objects that are no longer in use, helping to prevent memory leaks and ensure efficient memory usage.
+Go's runtime scheduler (GOROOT) manages the distribution of goroutines across CPU cores and handles the allocation and deallocation of stack and heap memory for each goroutine.
+
+**Virtual address space** can be thought of as a designated range or area where a program or process operates within the memory of a computer system. It's like the "workspace" or "territory" allocated for the program, allowing it to manage and utilize memory resources as needed for its execution. This range provides a structured environment for the program to work within, ensuring that it has access to the memory it requires while also maintaining isolation and security from other programs or processes running on the same system.
+
+==============================================================================================================================================================================================================
