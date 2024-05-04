@@ -109,3 +109,6 @@ Here's how the Von Neumann bottleneck relates to this scenario:
 
 Similarly, in computer systems, if the processor spends more time waiting for data from memory than executing instructions, it slows down overall performance, creating the Von Neumann bottleneck.
 
+==============================================================================================================================================================================================================
+
+**Moore's Law** is the observation made by Gordon Moore, co-founder of Intel, in 1965, that the number of transistors on a microchip doubles approximately every two years, leading to a continuous increase in computing power and performance, and a decrease in cost. Essentially, it predicts that the capabilities of computer technology will exponentially grow over time, resulting in faster and more powerful devices.
