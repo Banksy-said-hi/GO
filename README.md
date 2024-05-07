@@ -141,3 +141,29 @@ Go's runtime scheduler (GOROOT) manages the distribution of goroutines across CP
 **Virtual address space** can be thought of as a designated range or area where a program or process operates within the memory of a computer system. It's like the "workspace" or "territory" allocated for the program, allowing it to manage and utilize memory resources as needed for its execution. This range provides a structured environment for the program to work within, ensuring that it has access to the memory it requires while also maintaining isolation and security from other programs or processes running on the same system.
 
 ==============================================================================================================================================================================================================
+
+
+**Memory space** refers to the area in a computer's memory where data, instructions, and variables are stored during program execution.
+
+Analogy: Imagine a large warehouse as the computer's memory. Within this warehouse, there are different shelves, bins, and containers where items (data) are stored. Each item has its own unique address (memory address) to easily locate it. The warehouse manager (operating system) keeps track of which items are stored where and ensures that they are retrieved and manipulated correctly.
+
+In this analogy:
+
+The warehouse represents the computer's memory space.
+Shelves, bins, and containers represent memory locations where data is stored.
+Items represent data, instructions, and variables stored in memory.
+The warehouse manager represents the operating system, responsible for managing and organizing the memory space.
+
+==============================================================================================================================================================================================================
+
+Each **process** in an operating system has its own unique memory space or address space. This memory space includes:
+
+Code Segment: This contains the executable code of the program.
+
+Data Segment: This includes global and static variables used by the program.
+
+Heap: This is dynamically allocated memory used for data structures like arrays and objects.
+
+Stack: This is used for storing local variables and function call information.
+
+Each process's memory space is isolated from other processes, meaning one process cannot directly access the memory of another process. This isolation provides security and stability to the system, as processes cannot interfere with each other's execution or corrupt each other's data.
