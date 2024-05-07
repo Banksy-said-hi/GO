@@ -156,14 +156,14 @@ The warehouse manager represents the operating system, responsible for managing 
 
 ==============================================================================================================================================================================================================
 
-Each **process** in an operating system has its own unique memory space or address space. This memory space includes:
+Each **process** in an operating system has its own unique **memory space** or **address space**. This memory space includes:
 
-Code Segment: This contains the executable code of the program.
+**Code Segment**: This contains the executable code of the program.
 
-Data Segment: This includes global and static variables used by the program.
+**Data Segment**: This includes global and static variables used by the program.
 
-Heap: This is dynamically allocated memory used for data structures like arrays and objects.
+**Heap**: This is dynamically allocated memory used for data structures like arrays and objects.
 
-Stack: This is used for storing local variables and function call information.
+**Stack**: This is used for storing local variables and function call information.
 
 Each process's memory space is isolated from other processes, meaning one process cannot directly access the memory of another process. This isolation provides security and stability to the system, as processes cannot interfere with each other's execution or corrupt each other's data.
