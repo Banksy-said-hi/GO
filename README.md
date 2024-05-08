@@ -189,3 +189,20 @@ This scenario illustrates a race condition:
 - The lack of coordination or synchronization (such as taking turns or checking if the stove is available) leads to unpredictable behavior and potentially delays in dinner preparation.
 
 In Go programming, a race condition similarly occurs when multiple goroutines access shared resources (like variables or data structures) without proper synchronization. The outcome of the program depends on the timing and interleaving of goroutine execution, leading to unpredictable behavior and potential bugs. To avoid race conditions in Go, synchronization mechanisms like mutexes or channels are used to coordinate access to shared resources among goroutines.
+
+==============================================================================================================================================================================================================
+
+The main difference between unbuffered and buffered channels in Go lies in how they handle the sending and receiving of values:
+
+**Unbuffered Channels**:
+Unbuffered channels have a capacity of zero, meaning they can only hold one value at a time.
+When a sender sends a value on an unbuffered channel, it blocks until a receiver is ready to receive the value.
+Similarly, when a receiver tries to receive a value from an unbuffered channel, it blocks until a sender is ready to send a value.
+Unbuffered channels enforce a synchronous communication pattern, ensuring that both the sender and receiver are synchronized.
+
+**Buffered Channels**:
+Buffered channels have a specified capacity greater than zero, meaning they can hold multiple values, up to the specified capacity, without blocking the sender.
+When a sender sends a value on a buffered channel and the buffer is not full, the value is added to the buffer, and the sender proceeds without blocking.
+If the buffer is full when a sender tries to send a value, the sender blocks until there is space available in the buffer.
+Similarly, when a receiver tries to receive a value from a buffered channel, it blocks if the buffer is empty until there is a value available for receiving.
+Buffered channels allow for asynchronous communication, where the sender and receiver can proceed independently as long as the buffer has space (for sending) or contains values (for receiving).
