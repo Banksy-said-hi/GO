@@ -206,3 +206,16 @@ The main difference between unbuffered and buffered channels in Go lies in how t
 - If the buffer is full when a sender tries to send a value, the sender blocks until there is space available in the buffer.
 - Similarly, when a receiver tries to receive a value from a buffered channel, it blocks if the buffer is empty until there is a value available for receiving.
 - Buffered channels allow for asynchronous communication, where the sender and receiver can proceed independently as long as the buffer has space (for sending) or contains values (for receiving).
+
+==============================================================================================================================================================================================================
+
+**Unbuffered Channels**:
+- In unbuffered channels, where the capacity is zero, both send and receive operations block until both a sender and receiver are ready to communicate.
+- If a goroutine attempts to receive from an unbuffered channel and there's no sender ready to send a value, the receive operation blocks until a sender is ready.
+- Similarly, if a goroutine attempts to send to an unbuffered channel and there's no receiver ready to receive the value, the send operation blocks until a receiver is ready.
+
+**Buffered Channels**:
+- In buffered channels, the behavior of blocking send and receive operations depends on whether the buffer is full (for send) or empty (for receive).
+- If the buffer is full, a send operation on a buffered channel blocks until there's space available in the buffer, allowing the sender to proceed when the receiver has consumed some values from the buffer.
+- If the buffer is empty, a receive operation on a buffered channel blocks until there's at least one value available in the buffer, allowing the receiver to proceed when the sender has sent a value.
+- However, if the buffer has available space (for send) or contains values (for receive), the operation may not block the goroutine, allowing the sender or receiver to proceed immediately without waiting.
