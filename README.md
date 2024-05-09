@@ -224,11 +224,11 @@ The main difference between unbuffered and buffered channels in Go lies in how t
 
 The **make function** is used to initialize **slices**, **maps**, and **channels** only, and it returns an initialized (not zeroed) value of these types. Here's a brief explanation of each:
 
-**Slices**: make can be used to create a slice with a specific length and capacity. For example, **s := make([]int, 5, 10)** creates a slice of integers with length 5 and capacity 10.
+**Slices**: make can be used to create a slice with a specific length and capacity. For example, ```s := make([]int, 5, 10)``` creates a slice of integers with length 5 and capacity 10.
 
-**Maps**: make can be used to create a map. For example, **m := make(map[string]int)** creates a map with string keys and integer values. You can also specify an initial capacity as a hint for the number of elements the map will hold, like m := make(map[string]int, 10).
+**Maps**: make can be used to create a map. For example, ```m := make(map[string]int)``` creates a map with string keys and integer values. You can also specify an initial capacity as a hint for the number of elements the map will hold, like ```m := make(map[string]int, 10)```.
 
-**Channels**: make can be used to create a channel. For example, **c := make(chan int)** creates a channel for integers. You can also specify the buffer size for the channel, like c := make(chan int, 5) which creates a buffered channel with a capacity of 5.
+**Channels**: make can be used to create a channel. For example, ```c := make(chan int)``` creates a channel for integers. You can also specify the buffer size for the channel, like ```c := make(chan int, 5)``` which creates a buffered channel with a capacity of 5.
 
 Remember, make only applies to maps, slices and channels and does not return a pointer. For other types like arrays, structs, etc., you need to use the new function or literal syntax.
 
