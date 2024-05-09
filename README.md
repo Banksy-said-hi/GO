@@ -232,5 +232,30 @@ The **make function** is used to initialize **slices**, **maps**, and **channels
 
 Remember, make only applies to maps, slices and channels and does not return a pointer. For other types like arrays, structs, etc., you need to use the new function or literal syntax.
 
+==============================================================================================================================================================================================================
 
+**New** & **Make** Keyword:
+
+- **`new`** returns a pointer to the zero-initialized value of the specified type. It allocates memory for a new value and returns a pointer to that memory.
+  
+  Example:
+  ```go
+  p := new(Person)
+  // p is a pointer to a zero-initialized Person struct
+  ```
+
+- **`make`** returns an initialized value of the specified type (slice, map, or channel). It creates and initializes the specified data structure and returns it.
+
+  Example:
+  ```go
+  s := make([]int, 0, 5)
+  // s is an initialized slice with a length of 0 and capacity of 5
+  ```
+
+So, in summary:
+
+- Use `new` when you need to **allocate memory for a new value**, typically for pointer types.
+- Use `make` when you need to create and initialize **slices**, **maps**, or **channels** with their initial values and internal data structures.
+
+==============================================================================================================================================================================================================
 
