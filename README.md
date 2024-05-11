@@ -313,3 +313,12 @@ func main() {
 It simplifies the management of initialization tasks in concurrent programs and ensures that they are performed safely and efficiently.
 
 ==============================================================================================================================================================================================================
+
+**Deadlock**
+A deadlock is a situation in concurrent programming where two or more processes or threads are unable to proceed because each is waiting for the other to release a resource, resulting in a circular wait. 
+
+In other words, a deadlock occurs when two or more processes are indefinitely blocked because each process is holding a resource and waiting for another resource that is held by another process.
+
+Deadlocks can occur in various concurrent systems, including **multithreaded programs**, **distributed systems**, and **database transactions**. They are a common issue in concurrent programming and can be challenging to diagnose and debug.
+
+
