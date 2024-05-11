@@ -259,7 +259,11 @@ So, in summary:
 
 ==============================================================================================================================================================================================================
 
-The **select statement** allows you to wait on multiple communication operations simultaneously. It's often used with channels to coordinate communication between goroutines. The select statement blocks until one of its cases can proceed, and if multiple cases are ready, one is chosen at random.
+The **select statement** allows you to wait on multiple communication operations simultaneously. 
+
+It's often used with channels to coordinate communication between goroutines. 
+
+The select statement blocks until one of its cases can proceed, and if multiple cases are ready, one is chosen at random.
 
 ```
 // Use select to wait for either ch1 or ch2 to receive a value
@@ -273,3 +277,32 @@ case <-time.After(4 * time.Second):
 }
 ```
 ==============================================================================================================================================================================================================
+
+Mutual exclusion (often abbreviated as "mutex") is a synchronization technique used in concurrent programming to prevent multiple goroutines from accessing shared resources simultaneously. 
+
+It ensures that only one goroutine can access the shared resource at any given time, thus avoiding data races and maintaining consistency.
+
+```
+func main() {
+	var wg sync.WaitGroup
+	numGoroutines := 5
+
+	wg.Add(numGoroutines)
+
+	for i := 0; i < numGoroutines; i++ {
+		go func() {
+			mutex.Lock()
+			counter++
+			fmt.Println("Incremented counter to:", counter)
+			mutex.Unlock()
+
+			wg.Done()
+		}()
+	}
+
+	wg.Wait()
+
+	fmt.Println("Final Counter Value:", counter)
+}
+```
+
