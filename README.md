@@ -259,3 +259,17 @@ So, in summary:
 
 ==============================================================================================================================================================================================================
 
+The **select statement** allows you to wait on multiple communication operations simultaneously. It's often used with channels to coordinate communication between goroutines. The select statement blocks until one of its cases can proceed, and if multiple cases are ready, one is chosen at random.
+
+```
+// Use select to wait for either ch1 or ch2 to receive a value
+select {
+case msg1 := <-ch1:
+    fmt.Println("Received message from ch1:", msg1)
+case msg2 := <-ch2:
+    fmt.Println("Received message from ch2:", msg2)
+case <-time.After(4 * time.Second):
+    fmt.Println("Timeout: no message received within 4 seconds")
+}
+```
+==============================================================================================================================================================================================================
