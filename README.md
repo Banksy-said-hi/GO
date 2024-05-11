@@ -308,3 +308,8 @@ func main() {
 
 ==============================================================================================================================================================================================================
 
+**sync.Once** is particularly useful for lazy initialization of resources that should be initialized only once, **such as opening a file**, **establishing a database connection**, or **initializing a global data structure**. 
+
+It simplifies the management of initialization tasks in concurrent programs and ensures that they are performed safely and efficiently.
+
+==============================================================================================================================================================================================================
