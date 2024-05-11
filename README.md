@@ -278,7 +278,7 @@ case <-time.After(4 * time.Second):
 ```
 ==============================================================================================================================================================================================================
 
-Mutual exclusion (often abbreviated as "mutex") is a synchronization technique used in concurrent programming to prevent multiple goroutines from accessing shared resources simultaneously. 
+**Mutual exclusion** (often abbreviated as "mutex") is a synchronization technique used in concurrent programming to prevent multiple goroutines from accessing shared resources simultaneously. 
 
 It ensures that only one goroutine can access the shared resource at any given time, thus avoiding data races and maintaining consistency.
 
@@ -305,4 +305,6 @@ func main() {
 	fmt.Println("Final Counter Value:", counter)
 }
 ```
+
+==============================================================================================================================================================================================================
 
