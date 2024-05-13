@@ -321,4 +321,33 @@ In other words, a deadlock occurs when two or more processes are indefinitely bl
 
 Deadlocks can occur in various concurrent systems, including **multithreaded programs**, **distributed systems**, and **database transactions**. They are a common issue in concurrent programming and can be challenging to diagnose and debug.
 
+==============================================================================================================================================================================================================
+
+```
+package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func worker(done chan bool) {
+    fmt.Print("working...")
+    time.Sleep(time.Second)
+    fmt.Println("done")
+
+    // Send a value to notify that we're done.
+    done <- true
+}
+
+func main() {
+    // Make a channel for the worker to report when it's done.
+    done := make(chan bool)
+
+    go worker(done)
+
+    // Wait for the worker to finish.
+    <-done
+}
+```
 
