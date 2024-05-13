@@ -323,6 +323,7 @@ Deadlocks can occur in various concurrent systems, including **multithreaded pro
 
 ==============================================================================================================================================================================================================
 
+Within the main function, the execution stops until the **done** channel provides a value for the main function. 
 ```
 package main
 
