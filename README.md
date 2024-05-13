@@ -370,5 +370,49 @@ Here's how the analogy works:
 
 **Synchronization and Coordination**: The conveyor belts ensure that workers operate in a synchronized and coordinated manner, allowing them to pass items between each other efficiently. Similarly, channels in your Go program synchronize and coordinate the execution of goroutines, ensuring safe communication and data exchange.
 
+==============================================================================================================================================================================================================
+
+**Directional and Bidirectional Channels**
+
+
+```
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func sender(ch chan<- int) {
+	for i := 0; i < 5; i++ {
+		ch <- i // Send values to the channel
+		time.Sleep(time.Second) // Simulate some processing time
+	}
+	close(ch) // Close the channel when done sending values
+}
+
+func receiver(ch <-chan int, done chan<- bool) {
+	for {
+		val, ok := <-ch // Receive values from the channel
+		if !ok {
+			break // Exit the loop if the channel is closed
+		}
+		fmt.Println("Received:", val)
+	}
+	done <- true // Signal that the receiver is done
+}
+
+func main() {
+	ch := make(chan int)  // Create an unbuffered channel
+	done := make(chan bool) // Create a channel for signaling
+
+	go sender(ch) // Start the sender goroutine
+	go receiver(ch, done) // Start the receiver goroutine
+
+	<-done // Wait for the receiver to finish
+	fmt.Println("Receiver done.")
+}
+```
+
 
 
